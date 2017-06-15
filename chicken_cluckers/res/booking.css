@@ -30,3 +30,7 @@
 .translucent-form-overlay input::placeholder {
   color: #8a8a8a;
 }
+
+.bookingFormWrapper {
+  background-image: url(img/boxOffice.jpg);
+}

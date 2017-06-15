@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QA Cinemas | Booking</title>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="res/booking.css">
+  </head>
+  <body>
+
+    <!-- Start Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">QA Cinemas</li>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+          <li><a href="#">Five</a></li>
+          <li><a href="#">Six</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+
+	<!--
+	BOOKING ORDER FORM
+
+	The site should include a page dedicated to paying for tickets that are booked in advance.
+	• Payment page should gather the following information:
+		• Card holder’s name
+		• Card number
+		• Expiry date
+		• Security code / CVC
+		• The film theywant to see
+		• The date of the showing
+		• The time 
+	-->
+    <div class="bookingFormWrapper">
+	    <div class="translucent-form-overlay">
+	      <form>
+	        <h3>Book your Tickets</h3>
+	        <hr>
+	        <h4>Ticket Info</h4>
+	        <div class="form-group row columns" id="expiration-date">
+	            <label>Film</label>
+	            <select>
+	            	<option value="guardians">Guardians of the Galaxy Vol. 2</option>
+	            	<option value="wonder">Wonder Woman</option>
+	            	<option value="mummy">The Mummy</option>
+	            	<option value="baywatch">Baywatch</option>
+	            </select>
+	        </div>
+	        <div class="form-group row columns" id="expiration-date">
+	            <label>Viewing Date</label>
+	            <input type="datetime-local" name="">
+	        </div>
+	        <h4>Payment Info</h4>
+	        <div class="row">
+	          <label class="columns small-12">Name</label>
+	          <div class="columns small-6">
+	            <input type="text" name="firstName" id="firstName" placeholder="First" required>
+	          </div>
+	          <div class="columns small-6">
+	            <input type="text" name="lastName" id="lastName" placeholder="Last" required>
+	          </div>
+	        </div>
+	        <div class="row">
+	        	<div class="columns small-9">
+			        <label for="cardNum">Card Number</label>
+			    </div>
+			    <div class="columns small-3">
+			    	<label for="cvc">CVC</label>
+			    </div>
+		        <div class="columns small-9">  
+		          <input type="text" name="cardNum" id="cardNum" maxlength="16" placeholder="1234 5678 1234 5678" required>
+		        </div>
+		        <div class="columns small-3">  
+		          <input type="text" name="cvc" id="cvc" maxlength="3" placeholder="123" required>
+		        </div>
+		    </div>
+	        <div class="form-group row columns" id="expiration-date">
+	            <label>Expiration Date</label>
+	            <select>
+	                <option value="01">January</option>
+	                <option value="02">February </option>
+	                <option value="03">March</option>
+	                <option value="04">April</option>
+	                <option value="05">May</option>
+	                <option value="06">June</option>
+	                <option value="07">July</option>
+	                <option value="08">August</option>
+	                <option value="09">September</option>
+	                <option value="10">October</option>
+	                <option value="11">November</option>
+	                <option value="12">December</option>
+	            </select>
+	            <select>
+	                <option value="16"> 2016</option>
+	                <option value="17"> 2017</option>
+	                <option value="18"> 2018</option>
+	                <option value="19"> 2019</option>
+	                <option value="20"> 2020</option>
+	                <option value="21"> 2021</option>
+	            </select>
+	        </div>
+	        <button type="button" class="primary button expanded search-button">Search</button>
+	     </form>
+	    </div>
+    </div>
+
+    <div class="callout large secondary">
+      <div class="row">
+        <div class="large-4 columns">
+          <h5>Vivamus Hendrerit Arcu Sed Erat Molestie</h5>
+          <p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit.</p>
+        </div>
+        <div class="large-3 large-offset-2 columns">
+          <ul class="menu vertical">
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+            <li><a href="#">Four</a></li>
+          </ul>
+        </div>
+        <div class="large-3 columns">
+          <ul class="menu vertical">
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+            <li><a href="#">Four</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
