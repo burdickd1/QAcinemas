@@ -1,0 +1,41 @@
+package com.paul;
+
+import static org.junit.Assert.*;
+
+import org.jmock.Expectations;
+import org.jmock.Mockery;
+import org.jmock.integration.junit4.JUnit4Mockery;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class BankAccountTest {
+	BankAccount ba;
+	
+	@Before
+	public void setUp() throws Exception {
+		Mockery context = new JUnit4Mockery();
+		ba = context.mock(BankAccount.class);
+		
+		context.checking(new Expectations(){
+			{
+				oneOf(ba).debt(100);
+				oneOf(ba).credit(50);
+				oneOf(ba).getBalance();
+				will(returnValue(30));
+			}
+		});
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		ba.credit(100);
+		ba.debt(50);
+		ba.getBalance();
+	}
+
+}

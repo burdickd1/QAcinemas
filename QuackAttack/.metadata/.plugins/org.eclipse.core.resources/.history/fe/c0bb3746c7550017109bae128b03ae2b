@@ -1,0 +1,11 @@
+package com.ex5;
+
+public class ReverseString {
+
+	public static String reverse(String string) {
+		if(string == null) return null;
+		
+		return string;
+	}
+
+}

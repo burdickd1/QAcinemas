@@ -1,0 +1,10 @@
+package com.ex5;
+
+public class ReverseString {
+
+	public static String reverse(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

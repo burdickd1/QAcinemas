@@ -1,0 +1,10 @@
+package com.paul;
+
+public class MyArrayUtils {
+
+	public int findHighest(int[] array) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

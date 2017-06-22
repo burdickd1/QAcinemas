@@ -1,0 +1,10 @@
+package com.paul;
+
+public class MyArrayUtils {
+
+	public static int findHighest(int[] array) {
+		
+		return 10;
+	}
+
+}

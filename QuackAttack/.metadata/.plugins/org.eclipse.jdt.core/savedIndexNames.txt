@@ -1,0 +1,22 @@
+INDEX VERSION 1.130+C:\Users\Administrator\Desktop\QuackAttack\.metadata\.plugins\org.eclipse.jdt.core
+3391943133.index
+1559264671.index
+1738217456.index
+3743974291.index
+2715027571.index
+4194271827.index
+1230325328.index
+740817643.index
+1626788841.index
+388139569.index
+2237181896.index
+1263632578.index
+278669158.index
+3347693918.index
+3391529300.index
+2220590403.index
+186471443.index
+2114841939.index
+1682150477.index
+3540406714.index
+2182150416.index

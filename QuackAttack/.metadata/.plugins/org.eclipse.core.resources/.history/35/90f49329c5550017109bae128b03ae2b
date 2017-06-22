@@ -1,0 +1,52 @@
+package com.paul;
+
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class MyArraysUtilsTest {
+	
+	
+	@Before
+	public void setUp() throws Exception{
+		
+	}
+	
+	@After
+	public void tearDown() throws Exception{
+		
+	}
+	
+	@Test
+	public void testHighestInArrayOfOne() {
+		int[] array = {10};
+		assertEquals(MyArrayUtils.findHighest(array), 10);
+	}
+	
+	@Test
+	public void testHighestInArrayOfTwo() {
+		int[] array = {10, 20};
+		assertEquals(MyArrayUtils.findHighest(array), 20);
+	}
+	
+	@Test
+	public void testHighestInArrayOfThree() {
+		int[] array = {10, 50, 60};
+		assertEquals(MyArrayUtils.findHighest(array), 60);
+	}
+	
+	@Test
+	public void testHighestInArrayOfVarNum() {
+		int[] array = new int[(int)(Math.random() * 5000)];
+		for(int i = 0; i < array.length; ++i){
+			array[i] = (int)(Math.random() * 10000);
+		}
+		Arrays.sort(array);
+		assertEquals(MyArrayUtils.findHighest(array), array[array.length - 1]);
+	}
+
+}

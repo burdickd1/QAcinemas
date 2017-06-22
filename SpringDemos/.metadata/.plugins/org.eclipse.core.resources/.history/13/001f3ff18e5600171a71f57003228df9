@@ -1,0 +1,5 @@
+package com.paul.config;
+
+public class SpringConfig {
+
+}

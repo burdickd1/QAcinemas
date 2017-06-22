@@ -1,0 +1,6 @@
+package com.paul;
+
+public class Owner {
+	private String name;
+	private Pet[] pets;
+}

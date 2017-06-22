@@ -1,0 +1,54 @@
+package application;
+	
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+
+
+public class Main extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			GridPane root = new GridPane();
+			Scene scene = new Scene(root,400,400);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
+			ColumnConstraints col1 = new ColumnConstraints();
+			ColumnConstraints col2 = new ColumnConstraints();
+			col1.setPercentWidth(50);
+			col2.setPercentWidth(50);
+			
+			Label loginStage = new Label("Login Stage");
+			root.getColumnConstraints().addAll(col1,col2);
+			
+			
+			Label emailLabel = new Label("Enter Email");
+			TextField emailIn = new TextField("");
+			Label pswdLabel = new Label("Enter Password");
+			PasswordField pswdin = new PasswordField();
+			Label newULabel = new Label("New User?");
+			
+			
+			root.add(loginStage, 0, 0);
+			root.add(emailLabel, 0, 1);
+			root.add(emailIn, 1, 1);
+			root.add(pswdLabel, 0, 2);
+			root.add(pswdin, 1, 2);
+			root.add(newULabel, 0, 3);
+			
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

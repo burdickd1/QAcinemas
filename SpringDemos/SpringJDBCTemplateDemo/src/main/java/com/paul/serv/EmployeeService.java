@@ -1,0 +1,66 @@
+package com.paul.serv;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Service;
+
+import com.paul.models.Employee;
+
+@Service
+public class EmployeeService {
+	@Autowired
+	private JdbcTemplate template;
+	
+	private String INSERT = "INSERT into employee(first, last, email, pswd) values (?,?,?,?)";
+	private String SELECT = "";
+	
+	public int addRecord(Employee emp){
+		return template.update("INSERT into employee(first, last, email, pswd) values (?,?,?,?)", 
+				new Object[]{emp.getFirst(), emp.getLast(), emp.getEmail(), emp.getPswd()});
+	}
+	
+	public List<Employee> getAllEmp(){
+		return template.query("SELECT * from employee", new MyRowMapper());
+	}
+	
+	public List<Employee> getEmp(Employee emp){
+		return template.query("SELECT * from employee WHERE email=?", new Object[]{emp.getEmail()}, new MyRowMapper());
+	}
+	
+	public int updateEmp(Employee emp){
+		return template.update("UPDATE employee SET first=?, last=?, email=?, pswd=? WHERE 1", 
+				new Object[]{emp.getFirst(), emp.getLast(), emp.getEmail(), emp.getPswd()});
+	}
+	
+	public int deleteEmp(Employee emp){
+		return template.update("DELETE FROM employee WHERE first = ?", new Object[]{emp.getFirst()});
+	}
+	
+	
+	/*public void drop(){
+		template.execute("DROP TABLE employee");
+	}
+	
+	public void create(){
+		template.execute("CREATE table employee(first varchar(20), last varchar(20), email varchar(20), pswd varchar(20))");
+	}*/
+	
+	private class MyRowMapper implements RowMapper<Employee>{
+
+		@Override
+		public Employee mapRow(ResultSet rs, int recNum) throws SQLException {
+			Employee emp = new Employee();
+			emp.setFirst(rs.getString("first"));
+			emp.setLast(rs.getString("last"));
+			emp.setEmail(rs.getString("email"));
+			emp.setPswd(rs.getString("pswd"));
+			return emp;
+		}
+		
+	}
+}

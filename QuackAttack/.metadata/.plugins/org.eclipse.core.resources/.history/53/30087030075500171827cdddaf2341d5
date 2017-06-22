@@ -1,0 +1,23 @@
+
+public class NumOne {
+
+	public static void main(String[] args) {
+		int i = 0;
+		
+		while(i < 10){
+			System.out.println("index: " + i + " index + 10: " + (i + 10));
+			++i;
+		}
+		for(int j = 0; j < 10; ++j){
+			System.out.println("index: " + j + " index + 10: " + (j + 10));
+		}
+		
+		i = 0;
+		while(i < 10){
+			System.out.println("index: " + i + " index + 10: " + (Math.pow(2, i)));
+			++i;
+		}
+
+	}
+
+}
